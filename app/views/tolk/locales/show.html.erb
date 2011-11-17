@@ -1,5 +1,5 @@
 <% content_for :locale do %>
-  <span class="locale"><%= @locale.language_name %></span>
+  <span class="locale"><%=h @locale.language_name %></span>
 <% end %>
 
 <% content_for :head do %>
@@ -21,7 +21,7 @@
      <% form_for @locale do |locale_form| %>
       <table class="translations">
         <tr>
-          <th class="translation"><%= @locale.language_name -%></th>
+          <th class="translation"><%=h @locale.language_name -%></th>
           <th class="key"><%= Tolk::Locale.primary_language_name -%></th>
         </tr>
         <% @phrases.each do |phrase| %>

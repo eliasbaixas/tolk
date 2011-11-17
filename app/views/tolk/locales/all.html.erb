@@ -43,7 +43,7 @@
                 <%= format_i18n_value(phrase.translations.primary.text) -%>
               <% end %>
 
-              <span class="key"><%= phrase.key %></span>
+              <span class="key"><%=h phrase.key %></span>
             </td>
           </tr>
         <% end %>
